@@ -1,0 +1,38 @@
+@font-face {
+	font-family: 'Oswald-Bold';
+	src: url('../public/fonts/Oswald-Bold.ttf');
+}
+
+@font-face {
+	font-family: 'Oswald-ExtraLight';
+	src: url('../public/fonts/Oswald-ExtraLight.ttf');
+}
+
+@font-face {
+	font-family: 'Oswald-Light';
+	src: url('../public/fonts/Oswald-Light.ttf');
+}
+
+@font-face {
+	font-family: 'Oswald-Medium';
+	src: url('../public/fonts/Oswald-Medium.ttf');
+}
+
+@font-face {
+	font-family: 'Oswald-Regular';
+	src: url('../public/fonts/Oswald-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Oswald-SemiBold';
+	src: url('../public/fonts/Oswald-SemiBold.ttf');
+}
+@font-face {
+	font-family: 'SFUIDisplay-Regular';
+	src: url('../public/fonts/SFUIDisplay-Regular.eot');
+}
+
+/* @font-face {
+	font-family: 'Gilroy-bold';
+	src: url('../public/fonts/gilroy-bold.ttf');
+} */
