@@ -21,7 +21,7 @@ export const products = [
 		},
 		options: {
 			key: 'мм',
-			value: 8,
+			value: 10,
 		},
 		title: 'ЦСП 2700х1250х8',
 	},
@@ -34,7 +34,7 @@ export const products = [
 		},
 		options: {
 			key: 'мм',
-			value: 8,
+			value: 12,
 		},
 		title: 'ЦСП 2700х1250х8',
 	},
@@ -47,7 +47,7 @@ export const products = [
 		},
 		options: {
 			key: 'мм',
-			value: 8,
+			value: 16,
 		},
 		title: 'ЦСП 2700х1250х8',
 	},
@@ -60,12 +60,25 @@ export const products = [
 		},
 		options: {
 			key: 'мм',
-			value: 8,
+			value: 20,
 		},
 		title: 'ЦСП 2700х1250х8',
 	},
 	{
 		id: 6,
+		img: '/images/catalog.jpg',
+		price: {
+			key: 'руб/лист',
+			value: 781,
+		},
+		options: {
+			key: 'мм',
+			value: 24,
+		},
+		title: 'ЦСП 2700х1250х8',
+	},
+	{
+		id: 7,
 		img: '/images/catalog.jpg',
 		price: {
 			key: 'руб/лист',
