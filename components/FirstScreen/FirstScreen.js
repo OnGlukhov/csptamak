@@ -4,7 +4,7 @@ export default function FirstScreen() {
 		<section className={styles.firstScreen}>
 			<div className={styles.firstScreen_wrapper_block}>
 				<div className={styles.firstScreen_block}>
-					<div className={styles.firstScreen_line}></div>
+					<div className={`${styles.firstScreen_line} ${styles.fadeInLeft}`}></div>
 
 					<h1 className={styles.firstScreen_title}>
 						<span className={styles.firstScreen_span}>ЦСП</span> ТАМАК от 724
@@ -23,7 +23,7 @@ export default function FirstScreen() {
 				</div>
 			</div>
 
-			<div className={styles.firstScreen_wrapper}></div>
+			<div className={`${styles.firstScreen_wrapper} ${styles.fadeIn}`}></div>
 		</section>
 	)
 }

@@ -6,6 +6,7 @@ import FirstScreen from '../components/FirstScreen/FirstScreen'
 import Description from '../components/Description/Description'
 import OrderCall from '../components/OrderCall/OrderCall'
 import Сatalog from '../components/Сatalog/Сatalog'
+import Advantages from '../components/Advantages/Advantages'
 
 export default function Home() {
 	return (
@@ -20,6 +21,8 @@ export default function Home() {
 			<Description />
 			<OrderCall />
 			<Сatalog />
+			<Advantages />
+			
 		</div>
 	)
 }

@@ -14,7 +14,7 @@
 		background-size: cover
 		background-repeat: no-repeat
 		width: calc(50% + 60px)
-		
+		animation-name: fadeIn
 	&_block
 		margin-left: auto
 		width: 585px
@@ -45,7 +45,6 @@
 		margin-top: 40px
 		font-size: 16px
 		padding: 16px 55px
-		transition: transform 0.3s cubic-bezier(0.2, 1, 0.3, 1), opacity 0.3s cubic-bezier(0.2, 1, 0.3, 1)
 		border: none
 		border-radius: 6px
 		line-height: 1.5
@@ -54,6 +53,10 @@
 		&:hover
 			background-color: #ac0909
 			border-color: #ac0909
+			// transition: 0.25s cubic-bezier(0.2, 1, 0.3, 1)
+		& span
+			&:hover
+				transition: transform 0.3s
 	&_line
 		width: 70px
 		height: 2px
