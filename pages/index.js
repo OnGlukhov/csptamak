@@ -7,6 +7,8 @@ import Description from '../components/Description/Description'
 import OrderCall from '../components/OrderCall/OrderCall'
 import Сatalog from '../components/Сatalog/Сatalog'
 import Advantages from '../components/Advantages/Advantages'
+import Examples from '../components/Examples/Examples'
+import FeedBack from '../components/FeedBack/FeedBack'
 
 export default function Home() {
 	return (
@@ -22,6 +24,8 @@ export default function Home() {
 			<OrderCall />
 			<Сatalog />
 			<Advantages />
+			<Examples />
+			<FeedBack />
 			
 		</div>
 	)

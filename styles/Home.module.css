@@ -108,6 +108,21 @@
 	margin-left: 0.5rem;
 }
 
+.title h3 {
+	font-size: 36px;
+	line-height: 1.33333;
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	font-family: SFUIDisplay-Regular,sans-serif;
+	font-weight: 400;
+}
+.title h3 span {
+	color: red;
+	font-weight: 700;
+}
+
+
 @media (max-width: 600px) {
 	.grid {
 		width: 100%;
