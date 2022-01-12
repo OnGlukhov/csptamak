@@ -1,7 +1,7 @@
 import styles from './Advantages.module.sass'
 export default function Advantages() {
 	return (
-		<section className={styles.advantages}>
+		<section className={styles.advantages} id="advantages">
 				<h3 className={styles.advantages_title}>Преимущества <span>ЦСП</span></h3>
 				<article className={styles.advantages_container}>
 					<div className={styles.block}>

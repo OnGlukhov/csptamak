@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import styles from './FeedBack.module.sass'
-
+// import
 export default function FeedBack(props) {
   const router = useRouter();
   console.log('🚀 ~ file: FeedBack.js ~ line 6 ~ FeedBack ~ router', router);
@@ -101,8 +101,9 @@ export default function FeedBack(props) {
   }
 
   return (
-    <section className={styles.container}>
       <form className={styles.form}>
+        <h3>СВЯЖИТЕСЬ С НАМИ</h3>
+
         {formStatus === 'show' && (
           <div>
             <div className={styles.form_top}>
@@ -187,6 +188,5 @@ export default function FeedBack(props) {
           <p className={`text-center py-10`}>Запрос успешно отправлен. Спасибо за обращение!</p>
         )}
       </form>
-    </section>
   );
 }

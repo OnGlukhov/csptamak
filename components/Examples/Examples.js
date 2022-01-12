@@ -3,7 +3,7 @@ import { examples } from '../../data/examples'
 
 export default function Examples() {
 	return (
-		<section className={styles.examples}>
+		<section className={styles.examples} id="examples">
       <h1 className={styles.examples_title}>Примеры использования <span>ЦСП</span></h1>
       <p className={styles.examples_subtitle}>Цементно-стружечные плиты применяются в самых разных областях строительства, для самых разных целей.</p>
       <div className={styles.examples_item_list}>

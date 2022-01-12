@@ -19,7 +19,7 @@ export default function Сatalog() {
 		
 	} 
 	return (
-		<section className={styles.catalog}>
+		<section className={styles.catalog} id='catalog'>
 			<h1 className={styles.catalog_title}>
 				Размеры и цены <span>ЦСП</span> плит
 			</h1>

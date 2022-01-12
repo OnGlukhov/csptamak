@@ -1,7 +1,7 @@
 import styles from './FirstScreen.module.sass'
 export default function FirstScreen() {
 	return (
-		<section className={styles.firstScreen}>
+		<section className={styles.firstScreen} id='main'>
 			<div className={styles.firstScreen_wrapper_block}>
 				<div className={styles.firstScreen_block}>
 					<div className={`${styles.firstScreen_line} ${styles.fadeInLeft}`}></div>
