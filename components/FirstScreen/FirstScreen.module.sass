@@ -4,6 +4,8 @@
 	height: 768px
 	margin: 0 auto
 	position: relative
+	padding: 0 15px
+
 	&_wrapper
 		background: url(/images/main.png) center center no-repeat
 		position: absolute
@@ -11,17 +13,21 @@
 		right: 0
 		bottom: 0
 		left: auto
-		background-size: cover
-		background-repeat: no-repeat
-		width: calc(50% + 60px)
+		background-size: contain
+		width: calc(45% + 50px)
 		animation-name: fadeIn
+		@media(max-width: 769px)
+			width: 100%
 	&_block
 		margin-left: auto
-		width: 585px
+		max-width: 585px
 		font-family: SFUIDisplay-Regular, sans-serif
 	&_wrapper_block
 		width: 50%
-
+		z-index: 1
+		@media(max-width: 769px)
+			width: 100%
+			background-color: rgba(249, 249, 248, .5)
 
 	&_title
 		font-size: 36px
