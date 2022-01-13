@@ -22,8 +22,10 @@ export default function FirstScreen() {
 					</a>
 				</div>
 			</div>
-
-			<div className={`${styles.firstScreen_wrapper} ${styles.fadeIn}`}></div>
+			
+			{/* <div className={styles.over}></div> */}
+			<div className={styles.firstScreen_wrapper}></div>
+			
 		</section>
 	)
 }

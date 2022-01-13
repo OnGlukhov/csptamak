@@ -1,11 +1,17 @@
 .orderCall
 	background-color: #454545
-	padding: 40px 0
+	padding: 40px 15px
+	@media(max-width: 769px)
+		padding: 40px 30px
 	&_title
 		font-size: 24px
 		line-height: 1.33333
 		font-weight: 400
 		margin: 0
+		@media(max-width: 769px)
+			font-size: 18px
+			margin-bottom: 15px
+			// text-align: center
 		& span 
 			font-weight: 700
 	&_subtitle
@@ -13,6 +19,8 @@
 		line-height: 1.33333
 		letter-spacing: 0
 		margin: 0
+		@media(max-width: 769px)
+			// text-align: center
 	&_wrapper	
 		max-width: 1040px
 		margin: 0 auto
@@ -20,12 +28,19 @@
 		justify-content: space-between
 		align-items: center
 		color: #fff
+		flex-wrap: wrap
+		@media(max-width: 1200px)
+			flex-direction: column
+
+		
 	&_block
 		height: 80px
 		display: flex
 		flex-direction: column
 		justify-content: space-between
 		font-family: SFUIDisplay-Regular,sans-serif
+		@media(max-width: 1200px)
+			height: unset
 	&_button
 		color: #fff
 		background-color: #ff0000
@@ -38,7 +53,9 @@
 		line-height: 1.5
 		font-family: 'OSWALD-MEDIUM'
 		letter-spacing: 0.2em
-
+		margin-left: 20px
+		@media(max-width: 1200px)
+			margin-top: 25px 
 		&:hover
 			background-color: #ac0909
 			border-color: #ac0909
