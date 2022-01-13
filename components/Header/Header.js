@@ -2,8 +2,8 @@ import styles from './Header.module.sass'
 import Navigation from '../Navigation/Navigation'
 import Burger from '../Burger/Burger'
 
-export default function Header({size}) {
-	console.log(size)
+export default function Header({width}) {
+	console.log(width)
 	return (
 		<header className={styles.header}>
 			<div className={styles.header_wrapper}>
@@ -13,7 +13,7 @@ export default function Header({size}) {
 				className={styles.header_logo}
 				
 				/>
-				{ size > 990? <Navigation /> : <Burger />}
+				{ width > 990? <Navigation /> : <Burger />}
 			</div>
 
 		</header>

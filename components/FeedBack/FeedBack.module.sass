@@ -10,7 +10,7 @@
 .user_form_alert_borders  
   color: #ff0000
 .user_form_input 
-  width: 100%
+  // width: 100%
   min-height: 48px
   padding: 11px 19px
   font-size: 16px
@@ -20,7 +20,6 @@
   background-color: #fff
   border-radius: 6px
   transition: .3s ease-in-out
-  border: 1px solid #c5c6cd
   outline: none
   border: none
   border-bottom: 1px solid #c5c6cd
@@ -31,26 +30,45 @@
     font-family: SFUIDisplay-Regular,sans-serif
 
 .form
-  // margin: 0 auto
-  width: 500px
+  // margin-top: 24px
+  // width: 530px
   display: flex
   flex-direction: column
   color: #aeb1be
+  margin: 0 auto
+  color: #aeb1be
+  padding: 0px 50px
+  @media(max-width: 1000px)
+    padding: unset
+  @media(max-width: 769px)
+    width: 70%
+  @media(max-width: 500px)
+    width: 80%
   & h3
     font-family: SFUIDisplay-Regular,sans-serif
     font-size: 16px
     line-height: 1.5
-    margin: 0 20px
+    margin: 0 10px 24px
     font-weight: 300
     letter-spacing: .03em
+
   &_top
     display: flex
     justify-content: space-between
+    @media( max-width: 769px )
+      flex-direction: column
   &_wrap
-    margin-bottom: 20px
+    margin: 0 10px 20px
+    justify-content: center
+    display: flex
+    flex-direction: column
+    // width: 100%
   &_bottom
     display: flex
     justify-content: space-between
+    @media( max-width: 769px )
+      flex-direction: column
+
   &_button
     color: #fff
     background-color: #ff0000
@@ -63,6 +81,14 @@
     letter-spacing: 0.2em
     height: 48px
     width: 235px
+    margin: 0 10px
+    width: 235px
+    @media( max-width: 769px )
+      width: unset
+
+      
 .textarea
   resize: vertical
+  width: 100%
+
 

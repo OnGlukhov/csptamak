@@ -105,7 +105,7 @@ export default function FeedBack(props) {
         <h3>СВЯЖИТЕСЬ С НАМИ</h3>
 
         {formStatus === 'show' && (
-          <div>
+          <>
             <div className={styles.form_top}>
                 <div className={styles.form_wrap} >
                   <input
@@ -139,23 +139,24 @@ export default function FeedBack(props) {
 
                 </div>
             </div>
-              <div className={styles.form_wrap} >
-                <textarea
-                  className={`${`${styles.user_form_input} ${styles.textarea}`} ${checkFormStatus[2] ? `${styles.user_form_alert_borders}` : ``}`}
-                  required
-                  id='FeedBackFormBody'
-                  placeholder='Сообщение'
-                  rows={4}
-                  value={formState.body}
-                  onChange={(e) =>
-                    setFormState((state) => {
-                      return { ...state, body: e.target.value };
-                    })
-                  }
-                />
-                {checkFormStatus[2] && <p className={styles.user_form_alert}>Сообщение должен быть больше 10 символов</p>}
+            <div className={styles.form_wrap} >
+              <textarea
+                className={`${`${styles.user_form_input} ${styles.textarea}`} ${checkFormStatus[2] ? `${styles.user_form_alert_borders}` : ``}`}
+                required
+                id='FeedBackFormBody'
+                placeholder='Сообщение'
+                rows={4}
+                value={formState.body}
+                onChange={(e) =>
+                  setFormState((state) => {
+                    return { ...state, body: e.target.value };
+                  })
+                }
+              />
+              {checkFormStatus[2] && <p className={styles.user_form_alert}>Сообщение должен быть больше 10 символов</p>}
 
-              </div>
+            </div>
+              
             <div className={styles.form_bottom}>
                 <div className={styles.form_wrap} >
                   <input
@@ -181,7 +182,7 @@ export default function FeedBack(props) {
                 </button>
 
             </div>
-          </div>
+          </>
         )}
         {formStatus === 'pending' && <p className={`text-center py-10`}>Отправка запроса</p>}
         {formStatus === 'complete' && (

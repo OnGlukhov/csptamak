@@ -1,8 +1,9 @@
 import styles from './Сatalog.module.sass'
 import { products } from '../../data/products'
 import React, { useState } from 'react';
+import Dropdown from '../Dropdown/Dropdown';
 
-export default function Сatalog() {
+export default function Сatalog({width}) {
 	const [productsFilter, setProductsFilter] = React.useState(products)
 	const [state, setState] = React.useState({
 		shosen: null
@@ -28,7 +29,8 @@ export default function Сatalog() {
 				1250, с толщиной ЦСП плиты от 8 до 24 мм.
 			</p>
 			<div className={styles.catalog_size}>
-				<ul className={styles.catalog_list}>
+				<Dropdown props={products, filterProducts}/>
+				{/* <ul className={styles.catalog_list}>
 					<li onClick={() => { filterProducts(false) 
 					setState(state => ({...state, shosen: null}))
 					} } className={null === state.shosen? `${styles.active} ${styles.catalog_list_item}` : styles.catalog_list_item}>Все</li>
@@ -48,7 +50,10 @@ export default function Сatalog() {
 					))
 					}
 				</ul>
-				<div className={styles.catalog_line}></div>
+				<div className={styles.catalog_line}></div> */}
+				<div>
+
+				</div>
 			</div>
 			<div className={styles.catalog_products}>
 				{productsFilter.map((product, i) => (
