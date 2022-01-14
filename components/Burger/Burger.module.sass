@@ -10,6 +10,8 @@
   flex-direction: column
   max-width: 260px
   z-index: 2
+  opacity: 0
+  transition: 0.5s
   
   &_icon
     position: absolute
@@ -35,7 +37,7 @@
   &_list
     color: #fff
     list-style: none
-    font-family: 'OSWALD-MEDIUM'
+    
     padding: 0
     display: flex
     justify-content: flex-start
@@ -66,7 +68,7 @@
 
 .active
   display: flex
-  
+  opacity: 1
 .margin
   margin: 0
 

@@ -1,23 +1,73 @@
 import styles from './Navigation.module.sass'
-
+import { Link } from 'react-scroll'
 export default function Navigation() {
 	return (
 		<nav className={styles.nav}>
-			<a className={styles.nav_link} href='#main'>
+			<Link activeClass={styles.active}
+				className={styles.nav_link}
+				to="main"
+				spy={true}
+				smooth={true}
+				hashSpy={true}
+				duration={300}
+				isDynamic={true}
+				ignoreCancelEvents={false}
+				spyThrottle={300}
+			>
 				ГЛАВНАЯ
-			</a>
-			<a href='#catalog' className={styles.nav_link}>
+			</Link>
+			<Link activeClass={styles.active}
+				className={styles.nav_link}
+				to="catalog"
+				spy={true}
+				smooth={true}
+				hashSpy={true}
+				duration={300}
+				isDynamic={true}
+				ignoreCancelEvents={false}
+				spyThrottle={300}
+			>
 				ЦЕНА
-			</a>
-			<a className={styles.nav_link} href='#advantages'>
+			</Link>
+			<Link activeClass={styles.active}
+				className={styles.nav_link}
+				to="advantages"
+				spy={true}
+				smooth={true}
+				hashSpy={true}
+				duration={300}
+				isDynamic={true}
+				ignoreCancelEvents={false}
+				spyThrottle={300}
+			>
 				ПРЕИМУЩЕСТВА
-			</a>
-			<a className={styles.nav_link} href='#examples'>
+			</Link>
+			<Link activeClass={styles.active}
+				className={styles.nav_link}
+				to="examples"
+				spy={true}
+				smooth={true}
+				hashSpy={true}
+				duration={300}
+				isDynamic={true}
+				ignoreCancelEvents={false}
+				spyThrottle={300}
+			>
 				ПРИМЕНЕНИЕ
-			</a>
-			<a className={styles.nav_link} href='#contacts'>
+			</Link>
+			<Link activeClass={styles.active}
+				className={styles.nav_link}
+				to="contacts"
+				spy={true}
+				smooth={true}
+				hashSpy={true}
+				duration={300}
+				isDynamic={true}
+				ignoreCancelEvents={false}
+				spyThrottle={300}
+			>
 				КОНТАКТЫ
-			</a>
+			</Link>
 			<a
 				className={`${styles.nav_link} ${styles.nav_tel}`}
 				href='tel:+7 (800) 555-25-97'

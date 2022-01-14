@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: 'Oswald-Bold';
 	src: url('../public/fonts/Oswald-Bold.ttf');
 }
@@ -30,4 +30,8 @@
 @font-face {
 	font-family: 'SFUIDisplay-Regular';
 	src: url('../public/fonts/SFUIDisplay-Regular.eot');
+} */
+@font-face {
+	font-family: 'Montserrat-Medium';
+	src: url('../public/fonts/Montserrat-Medium.ttf');
 }

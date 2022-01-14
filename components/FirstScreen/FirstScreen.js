@@ -1,4 +1,6 @@
 import styles from './FirstScreen.module.sass'
+import { Link } from 'react-scroll'
+
 export default function FirstScreen() {
 	return (
 		<section className={styles.firstScreen} id='main'>
@@ -15,11 +17,20 @@ export default function FirstScreen() {
 						поколения. Он прочный, влагостойкий и долговечный, с плотностью
 						1250-1400кг/м3, толщиной 8-36 мм, гладкой и твердой поверхностью!
 					</p>
-					<a>
-						<button href='/' className={styles.firstScreen_button}>
+					<Link
+						to="contacts"
+						spy={true}
+						smooth={true}
+						hashSpy={true}
+						duration={300}
+						isDynamic={true}
+						ignoreCancelEvents={false}
+						spyThrottle={300}
+					>
+						<button className={styles.firstScreen_button}>
 							ОСТАВИТЬ ЗАЯВКУ
 						</button>
-					</a>
+					</Link>
 				</div>
 			</div>
 			

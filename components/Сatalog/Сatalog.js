@@ -1,15 +1,15 @@
 import styles from './Сatalog.module.sass'
 import { products } from '../../data/products'
-import React, { useState } from 'react';
-import Dropdown from '../Dropdown/Dropdown';
+import React, { useState } from 'react'
+import Dropdown from '../Dropdown/Dropdown'
+import Size from '../Size/Size'
 
 export default function Сatalog({width}) {
 	const [productsFilter, setProductsFilter] = React.useState(products)
-	const [state, setState] = React.useState({
-		shosen: null
-	})
-	// setState({chose: -1})
-	// console.log(state.shose)
+	const [state, setState] = React.useState(null)
+	const indexItem = index => {
+		setState(index)
+	}
 	
 	const filterProducts = size => {
 		if(!size) {
@@ -29,28 +29,9 @@ export default function Сatalog({width}) {
 				1250, с толщиной ЦСП плиты от 8 до 24 мм.
 			</p>
 			<div className={styles.catalog_size}>
-				<Dropdown props={products, filterProducts}/>
-				{/* <ul className={styles.catalog_list}>
-					<li onClick={() => { filterProducts(false) 
-					setState(state => ({...state, shosen: null}))
-					} } className={null === state.shosen? `${styles.active} ${styles.catalog_list_item}` : styles.catalog_list_item}>Все</li>
-					{products.map((product, index) => (
-						<div key={index} className={styles.catalog_wrapper}>
-							<li onClick={() => {
-								filterProducts(product.options.value)
-								setState(state => ({...state, shosen: index}))
-							}
-							}  className={index === state.shosen? `${styles.active} ${styles.catalog_list_item}` : styles.catalog_list_item}>
-								<a>
-								{`${product.options.value} ${product.options.key}`}
-								</a>
-							</li>
-						</div>
-
-					))
-					}
-				</ul>
-				<div className={styles.catalog_line}></div> */}
+				{width < 769? <Dropdown filterProducts={filterProducts} products={products} indexItem={indexItem} state={state}/> :
+				<Size filterProducts={filterProducts} products={products} indexItem={indexItem} state={state}/>}
+				<div className={styles.catalog_line}></div>
 				<div>
 
 				</div>

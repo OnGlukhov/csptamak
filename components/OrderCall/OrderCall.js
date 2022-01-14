@@ -1,4 +1,5 @@
 import styles from './OrderCall.module.sass'
+import { Link } from 'react-scroll'
 
 export default function OrderCall() {
 	return (
@@ -14,9 +15,18 @@ export default function OrderCall() {
 						Екатеринбургу и Санкт-Петербургу.
 					</p>
 				</div>
-				<a>
-					<button className={styles.orderCall_button}>Заказать звонок</button>
-				</a>
+				<Link 
+					to="contacts"
+					spy={true}
+					smooth={true}
+					hashSpy={true}
+					duration={300}
+					isDynamic={true}
+					ignoreCancelEvents={false}
+					spyThrottle={300}
+				>
+					<button className={styles.orderCall_button}>ЗАКАЗАТЬ ЗВОНОК</button>
+				</Link>
 			</div>
 		</section>
 	)

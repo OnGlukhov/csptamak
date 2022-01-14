@@ -7,12 +7,15 @@ export default function Header({width}) {
 	return (
 		<header className={styles.header}>
 			<div className={styles.header_wrapper}>
-				<img
-				src='/images/logo.png'
-				alt='Логотип ЦСК'
-				className={styles.header_logo}
-				
-				/>
+				<a href={'/'}>
+					<img
+					src='/images/logo.png'
+					alt='Логотип ЦСК'
+					className={styles.header_logo}
+					
+					/>
+				</a>
+
 				{ width > 990? <Navigation /> : <Burger />}
 			</div>
 
