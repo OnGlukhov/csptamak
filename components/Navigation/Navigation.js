@@ -27,7 +27,7 @@ export default function Navigation() {
 				ignoreCancelEvents={false}
 				spyThrottle={300}
 			>
-				ЦЕНА
+				ЦЕНЫ
 			</Link>
 			<Link activeClass={styles.active}
 				className={styles.nav_link}
