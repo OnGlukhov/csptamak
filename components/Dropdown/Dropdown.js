@@ -10,7 +10,7 @@ export default function Dropdown({ filterProducts, products, indexItem, state })
 		<div className={styles.dropdown}>
 			<button onClick={() => setIsActive(!isActive)} className={styles.dropdown_button}>
 				ВЫБРАТЬ
-				<img className={isActive && styles.dropdown_img} src={'/images/arrow.svg'}></img>
+				<img className={isActive ? `${styles.dropdown_img}` : ''} src={'/images/arrow.svg'}></img>
 			</button>
 			<ul className={isActive ? `${styles.dropdown_menu}` : `${styles.off}`}>
 				<li
@@ -20,14 +20,14 @@ export default function Dropdown({ filterProducts, products, indexItem, state })
 					}}
 					className={null === state ? `${styles.dropdown_item} ${styles.active}` : `${styles.dropdown_item}`}>Все</li>
 				{category.map((product, index) => (
-					<li
+					<li key={index}
 						onClick={() => {
 							filterProducts(product.value)
 							indexItem(index)
 							setIsActive(!isActive)
 						}}
 						className={index === state ? `${styles.dropdown_item} ${styles.active}` : `${styles.dropdown_item}`}
-						key={index}><a >{`${product.value} ${product.key}`}</a></li>
+						key={index}><a>{`${product.value} ${product.key}`}</a></li>
 				))}
 			</ul>
 			{isActive ? <div onClick={() => setIsActive(!isActive)} className={styles.overlay}></div> : ''}

@@ -75,11 +75,11 @@ export default function Navigation() {
 			>
 				8 (800) 555-25-97
 			</a>
-			<a
+			{/* <a
 				href={`https://api.whatsapp.com/send?phone=${contacts.whatsapp}`}
 			>
 				<img className={styles.whatsapp} src={'/images/social/whatsapp-svgrepo-com.svg'}></img>
-			</a>
+			</a> */}
 		</nav >
 	)
 }
