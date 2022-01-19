@@ -1,5 +1,6 @@
 import styles from './Burger.module.sass'
 import React from 'react'
+import { contacts } from '../../data/contacts'
 
 export default function Burger() {
   const [isActive, setIsActive] = React.useState(false)
@@ -11,7 +12,7 @@ export default function Burger() {
           <img src="images/icons8-menu.svg" />
         </nav>
       </div>
-      <nav className={isActive? `${styles.burger} ${styles.active}` : `${styles.burger}` }>
+      <nav className={isActive ? `${styles.burger} ${styles.active}` : `${styles.burger}`}>
         <ul className={styles.burger_list}>
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#main'>ГЛАВНАЯ</a></li>
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#catalog'>ЦЕНЫ</a></li>
@@ -20,13 +21,22 @@ export default function Burger() {
           <li onClick={() => setIsActive(!isActive)} className={styles.burger_list_item}><a href='#contacts'>КОНТАКТЫ</a></li>
         </ul>
         <ul className={`${styles.burger_list} ${styles.margin}`}>
-          <a onClick={() => setIsActive(!isActive)} className={styles.burger_list_tel} href={`tel:8 (800) 555-25-97`}>8 (800) 555-25-97</a>
-          <p className={styles.burger_list_address}>Московская область, Одинцово, улица Молодежная, 46</p>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <a onClick={() => setIsActive(!isActive)} className={styles.burger_list_tel} href={`tel:${contacts.phone}`}>{contacts.phone}</a>
+
+            {/* <a
+              href={`https://api.whatsapp.com/send?phone=${contacts.whatsapp}`}
+            >
+              <img className={styles.whatsapp} src={'/images/social/whatsapp-svgrepo-com.svg'}></img>
+            </a> */}
+
+          </div>
+          <p className={styles.burger_list_address}>{contacts.address}</p>
           <img className={styles.burger_list_logo} src='/images/logo-big.png' />
         </ul>
 
       </nav>
-      {isActive? <div onClick={() => setIsActive(!isActive)} className={styles.overlay}></div> : ''}
+      {isActive ? <div onClick={() => setIsActive(!isActive)} className={styles.overlay}></div> : ''}
     </>
 
   )

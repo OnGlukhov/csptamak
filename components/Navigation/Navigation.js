@@ -1,5 +1,6 @@
 import styles from './Navigation.module.sass'
 import { Link } from 'react-scroll'
+import { contacts } from '../../data/contacts'
 export default function Navigation() {
 	return (
 		<nav className={styles.nav}>
@@ -70,10 +71,15 @@ export default function Navigation() {
 			</Link>
 			<a
 				className={`${styles.nav_link} ${styles.nav_tel}`}
-				href='tel:+7 (800) 555-25-97'
+				href={`tel:${contacts.phone}`}
 			>
 				8 (800) 555-25-97
 			</a>
-		</nav>
+			<a
+				href={`https://api.whatsapp.com/send?phone=${contacts.whatsapp}`}
+			>
+				<img className={styles.whatsapp} src={'/images/social/whatsapp-svgrepo-com.svg'}></img>
+			</a>
+		</nav >
 	)
 }

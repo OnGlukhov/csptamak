@@ -33,10 +33,7 @@ export default function FirstScreen() {
 					</Link>
 				</div>
 			</div>
-			
-			{/* <div className={styles.over}></div> */}
 			<div className={styles.firstScreen_wrapper}></div>
-			
 		</section>
 	)
 }
