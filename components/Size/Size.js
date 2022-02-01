@@ -1,7 +1,7 @@
 import styles from "./Size.module.sass";
-import { category } from '../../data/category'
+// import { category } from '../../data/category'
 
-export default function Size({ filterProducts, products, indexItem, state }) {
+export default function Size({ filterProducts, category, indexItem, state }) {
 
   return (
     <ul className={styles.catalog_list}>
@@ -31,7 +31,7 @@ export default function Size({ filterProducts, products, indexItem, state }) {
                 : styles.catalog_list_item
             }
           >
-            <a>{`${item.value} ${item.key}`}</a>
+            <a>{item.value}</a>
           </li>
         </div>
       ))}
